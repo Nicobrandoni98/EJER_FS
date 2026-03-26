@@ -14,6 +14,8 @@ const App = () => {
 
   useEffect(() => {
     personsService.getAll().then((persons) => {
+      console.log("TYPE:", typeof persons);
+      console.log("DATA:", persons);
       setPersons(persons);
       console.log(persons);
     });
