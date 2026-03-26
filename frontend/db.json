@@ -1,0 +1,10 @@
+{
+  "persons": [
+    {
+      "id": "6cc2",
+      "name": "123",
+      "number": "123"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
