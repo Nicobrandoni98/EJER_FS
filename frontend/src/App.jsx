@@ -63,7 +63,7 @@ const App = () => {
       setNotification(`Se agregó ${returnedPerson.name}`);
       setTimeout(() => {
         setNotification(null);
-      }, 3000);
+      }, 2000);
     });
   };
 

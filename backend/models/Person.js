@@ -1,8 +1,21 @@
 const {model, Schema}=require('mongoose')
 
 const personSchema = new Schema({
-  name: String,
-  number: Number,
+  name: {
+    type: String, 
+    minLength: 5,
+    required: true
+  },
+  number: {
+    type: String,
+    validate: {
+        validator: function(v) {
+            return /\d{4}-\d{6}/.test(v)
+        },
+        message: props => `${props.value} is not a valid `
+    },
+    required: true
+  },
 });
 
 personSchema.set('toJSON', {
